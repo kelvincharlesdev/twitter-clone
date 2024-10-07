@@ -12,12 +12,12 @@ interface LayoutProps {
     children: React.ReactNode
 }
 
-export default function Layout({children}: LayoutProps) {
-    return(
+export default function Layout({ children }: LayoutProps) {
+    return (
         <main className="min-h-screen flex justify-center mx-auto max-w-7xl">
             <section className="hidden lg:flex flex-col sticky top-0 h-screen w-72 px-3 border-r-2 border-gray-900">
                 <div className="flex-1 mt-6 ">
-                    <Logo size={24}/>
+                    <Logo size={24} />
                     <nav className="mt-11">
                         <NavItem
                             label="Página inicial"
@@ -33,18 +33,18 @@ export default function Layout({children}: LayoutProps) {
                 </div>
 
                 <div className="mb-6 flex flex-col gap-4">
-                    <NavLogout/>
-                    <NavMyProfile/>
+                    <NavLogout />
+                    <NavMyProfile />
                 </div>
             </section>
             <section className="flex-1 max-w-lg">
                 {children}
             </section>
-            <aside className="hidden lg:flex flex-col gap-6 static top-0 h-fi w-96 px-8 py-6 border-l-2 border-gray-900">
-                <SearchInput hideOnSearch/>
-                
-                <TrendingArea/>
-                <RecommendationArea/>
+            <aside className="hidden lg:flex flex-col gap-6 sticky top-0 h-fit w-96 px-8 py-6 border-l-2 border-gray-900">
+                <SearchInput hideOnSearch />
+
+                <TrendingArea />
+                <RecommendationArea />
             </aside>
         </main>
     )
